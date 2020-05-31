@@ -1,31 +1,29 @@
-# YORG.io 3 Modding Documentation
+# ~~YORG.io 3~~ SHAPEZ.io Modding Testing
 
-This documentation is supposed to teach you how to write mods for YORG.io 3.
+This is a fork of https://github.com/tobspr/yorg.io-3-modding-docs to test mod implementation for https://github.com/tobspr/shapez.io.
+Please disregard the instructions below as they are outdated in this context.
 
 ## Writing Mods
-
 ### Getting started
 
-
-An example mod is located in `sample_mod/mod.js`. It contains a very basic example on
-how to setup a mod. I recommend cloning this repository.
+An example mod is located in `sample_mod/main.js`. It contains a very basic example on
+how to set up a mod. I recommend cloning this repository.
 
 To start with your own mod, I recommend copying the `sample_mod` folder somewhere.
-You can then start by modifying the `mod.js` to your needs.
+You can then start by modifying the `main.js` to your needs.
 
-While there is very basic API documentation, I **strongly** recommend to join the official discord (http://discord.yorg3.io) and get in contact with me (`tobspr#5407`). I am very happy to help out, and I can also add new features to the mod api if you need them.
+While there is very basic API documentation, I **strongly** recommend you join the official discord (http://discord.yorg3.io) and get in contact with me (`tobspr#5407`). I am very happy to help out, and I can also add new features to the mod api if you need them.
 
 There is also a documentation of all classes available which can be helpful: https://docs.yorg3.io
-
 
 ### Testing your own mod
 
 Since I manually publish all mods (See below), you can not directly test your mod. However, I have added some helper script which makes it possible to test local mods:
 
 1. Install node.js, or alternatively python 3.7 or higher
-2. Open a terminal shell in the folder your mod is located in (It needs to be called `mod.js`)
-3. Run `node mod_testing_server.js` (The script is located in this repository). If you installed python run `python mod_testing_server.py`
-4. Ensure with a browser that you can reach `http://localhost:8000/mod.js`
+2. Open a terminal shell in the folder your mod is located in (It needs to be called `main.js`)
+3. Run `node app.js` (The script is located in this repository). If you installed python run `python mod_testing_server.py`
+4. Ensure with a browser that you can reach `http://localhost:8000/main.js`
 5. Visit https://beta.yorg3.io/?xdev_modDeveloper=1
 6. There should now be a dummy mod installed, which will load your javascript file.
 7. Make sure to reload the page when doing any changes

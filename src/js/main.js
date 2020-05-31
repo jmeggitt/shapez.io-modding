@@ -1,14 +1,8 @@
-/*
-
-This is a very simple mod demonstration
-
-*/
-
 /**
  * @type {ModMainFunction}
  * @param {ModApi} api
  */
-function MySampleMod(api) {
+export function load(api) {
 
     // Its most convenient to have your resources encoded as base64 directly here
     const heartImage = new Image();
