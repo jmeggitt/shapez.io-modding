@@ -17,6 +17,13 @@
   },
   "homepage": "https://github.com/tobspr/yorg.io-3-modding-docs#readme",
   "dependencies": {
-    "webpack": "^4.43.0"
+    "circular-dependency-plugin": "^5.2.0",
+    "lz-string": "^1.4.4",
+    "trim": "0.0.1",
+    "webpack": "^4.43.0",
+    "webpack-strip-block": "^0.2.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.11"
   }
 }

@@ -6,9 +6,7 @@ const webpack_config = require('./webpack.config');
 
 webpack(webpack_config, (err, stats) => {
     if (err || stats.hasErrors()) {
-        console.log("Unable to complete webpack!");
-        console.log(err);
-        console.log(stats);
+        console.log("Unable to complete webpack: " + err);
     } else {
         console.log("Finished compiling webpack!");
     }
@@ -23,7 +21,7 @@ http.createServer((request, response) => {
     // Check if this is a main.js request
     if (request.url === "/mod.js") {
         const contentType = "text/javascript";
-        const content = fs.readFileSync("./main.js");
+        const content = fs.readFileSync("build/bundle.js");
         response.setHeader('Access-Control-Allow-Origin', '*');
         response.setHeader('Access-Control-Allow-Methods', 'GET');
         response.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
